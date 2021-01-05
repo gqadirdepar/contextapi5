@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Countercontext from './countercontext';
+import Parent from './parent'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Countercontext.Provider value={10}>
+        <Parent />
+      </Countercontext.Provider>
+
     </div>
   );
 }
